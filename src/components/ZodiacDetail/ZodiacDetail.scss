@@ -1,0 +1,79 @@
+@import "../../style/vars";
+.zodiac-detail {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px;
+  font-family: $font-family;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    .wrap-img {
+      margin-bottom: 20px;
+      padding: 10px;
+      img {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+  .container.visible {
+    opacity: 1;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .description {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    transition: opacity 0.3s ease-in-out;
+  }
+  @media (max-width: 600px) {
+    padding: 15px;
+    margin: 10px;
+  }
+}
