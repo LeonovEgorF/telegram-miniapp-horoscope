@@ -48,6 +48,15 @@ function App() {
           <button onClick={() => changeLanguage("ru")}>RU</button>
         </div>
       </header>
+      <div>
+        <span>
+          <button>
+            <div>
+              {'test'}
+            </div>
+          </button>
+        </span>
+      </div>
 
       {selectedSign ? (
         <ZodiacDetail sign={selectedSign} onBack={handleBack} />
